@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block title %} home{% endblock title %}
+
+{% block body %}
+<!-- <div class="card">
+    <img src="image-url-here" alt="Image description">
+    <div class="card-content">
+      <h2 id="card-title">Card Title</h2>
+      <p id="card-description">Card description text goes here.</p>
+    </div>
+  </div> -->
+<style>
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: 40px;
+
+    font-family: arial;
+  }
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+</style>
+
+<!-- <div>
+    {% for c in data1 %}
+    <div class="card">
+      
+      <img src="static/logo.png" alt="image" style="width: 100%; ">
+      <h1 id="card-title" >{{c.email}}</h1>
+      
+      <p id="card-description" >{{c.password}}</p>
+      
+    </div>
+    {% endfor%}
+  </div> -->
+
+<div class="row">
+  {% for c in data %}
+  <div class="card">
+    <img src="static/logo.png" alt="image" style="width: 100%; ">
+    <h1 id="card-title">{{c.heading}}</h1>
+
+    <p id="card-description">{{c.news}}</p>
+
+  </div>
+  {% endfor %}
+</div>
+
+<div>
+  <button id="myButton">Open Card</button>
+  <div id="myCard" style="display:none">
+    <div>
+      {% for c in data1 %}
+      <div class="card">
+        
+        
+        <h4 id="card-title" >{{c.email}}</h1>
+        
+        <h4 id="card-description" >{{c.password}}</h4>
+        
+      </div>
+      {% endfor%}
+    </div>
+  </div>
+</div>
+<script>
+document.getElementById("myButton").addEventListener("click", function() {
+  var card = document.getElementById("myCard");
+  if (card.style.display === "none") {
+    card.style.display = "block";
+  } else {
+    card.style.display = "none";
+  }
+});
+</script>
+
+
+{% endblock body %}

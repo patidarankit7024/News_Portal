@@ -1,0 +1,24 @@
+i= imread('C:\Users\Lenovo\Desktop\3.jpg');
+subplot(2,2,1);
+imshow(i)
+title('Input Image');
+pkg load image
+se=strel('square',20);
+f0=imopen(i,se);
+subplot(2,2,1);
+figure,imshow(i);
+subplot(2,2,1);
+figure,imshow(i);
+imshow(i)
+title('Input Image');
+subplot(2,2,2);
+imshow(f0)
+title("Opening Of Image");
+f2=imclose(i,se);
+subplot(2,2,3);
+imshow(f2)
+title("Closing Of Image");
+foc=imclose(f0,se);
+subplot(2,2,4);
+imshow(foc)
+title("Closing Of Opening Input Image");
