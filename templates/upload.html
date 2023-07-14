@@ -16,7 +16,7 @@
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
 
-                            <form action="/upload/" method="post">{% csrf_token %}
+                            <form action="\upload/" method="post" enctype="multipart/form-data">{% csrf_token %}
 
                                 <h3 class="mb-5">Upload News</h3>
 

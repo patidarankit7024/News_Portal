@@ -41,18 +41,7 @@
   }
 </style>
 
-<!-- <div>
-    {% for c in data1 %}
-    <div class="card">
-      
-      <img src="static/logo.png" alt="image" style="width: 100%; ">
-      <h1 id="card-title" >{{c.email}}</h1>
-      
-      <p id="card-description" >{{c.password}}</p>
-      
-    </div>
-    {% endfor%}
-  </div> -->
+
 
 <div class="row">
   {% for c in data %}
@@ -66,33 +55,15 @@
   {% endfor %}
 </div>
 
-<div>
-  <button id="myButton">Open Card</button>
-  <div id="myCard" style="display:none">
-    <div>
-      {% for c in data1 %}
-      <div class="card">
-        
-        
-        <h4 id="card-title" >{{c.email}}</h1>
-        
-        <h4 id="card-description" >{{c.password}}</h4>
-        
-      </div>
-      {% endfor%}
-    </div>
-  </div>
-</div>
-<script>
-document.getElementById("myButton").addEventListener("click", function() {
-  var card = document.getElementById("myCard");
-  if (card.style.display === "none") {
-    card.style.display = "block";
-  } else {
-    card.style.display = "none";
-  }
-});
-</script>
+
+
 
 
 {% endblock body %}
+
+
+
+
+
+
+ 
